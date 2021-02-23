@@ -7,7 +7,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FormikValidation from './FormikValidation';
 
 export default {
-  title: 'React Forms/2. Validation',
+  title: 'React Forms/2.Validation',
   parameters: {
     jsx: { skip: 1 },
   },

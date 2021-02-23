@@ -7,7 +7,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FormikBasic from './FormikBasic';
 
 export default {
-  title: 'React Forms/1. Basic',
+  title: 'React Forms/1.Basic',
   parameters: {
     jsx: { skip: 1 },
   },

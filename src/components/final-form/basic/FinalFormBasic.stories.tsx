@@ -7,7 +7,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FinalFormBasic from './FinalFormBasic';
 
 export default {
-  title: 'React Forms/1. Basic',
+  title: 'React Forms/1.Basic',
   parameters: {
     jsx: { skip: 1 },
   },
