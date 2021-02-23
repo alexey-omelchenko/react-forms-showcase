@@ -1,0 +1,8 @@
+{
+  "catalyst-frontend": {
+    "name": "example-all",
+    "projectType": "react",
+    "newFolder": true,
+    "ignoreNewFolderSettings": true
+  }
+}
