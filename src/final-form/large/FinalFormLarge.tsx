@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
-import RenderCount from '../../RenderCount/RenderCount';
+import RenderCount from '../../components/RenderCount/RenderCount';
 
 /**
  * TODO

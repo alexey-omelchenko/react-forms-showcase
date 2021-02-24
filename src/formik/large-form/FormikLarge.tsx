@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, FastField } from 'formik';
 
-import RenderCount from '../../RenderCount/RenderCount';
+import RenderCount from '../../components/RenderCount/RenderCount';
 
 type FormValues = {
   [key: string]: string;
