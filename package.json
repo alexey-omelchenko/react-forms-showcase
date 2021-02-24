@@ -5,7 +5,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "build": "rm -rf ./dist && webpack-cli",
-    "start": "NODE_ENV=development webpack-cli serve --mode development",
+    "start": "start-storybook -p 3000 -c .storybook",
     "test": "./node_modules/.bin/jest",
     "test:watch": "./node_modules/.bin/jest --watch",
     "test:coverage": "./node_modules/.bin/jest --coverage",
@@ -30,6 +30,7 @@
     "node": ">= 6.11.5"
   },
   "dependencies": {
+    "@hooks/render-count": "^0.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "whatwg-fetch": "^3.5.0"
