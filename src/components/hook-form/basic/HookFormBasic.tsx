@@ -1,13 +1,19 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import { watch } from 'fs';
 import React from 'react';
-import { useForm, useWatch } from 'react-hook-form';
+import { useForm, useWatch, Control } from 'react-hook-form';
 
-const IsolateReRender = ({ control }) => {
+type FormValues = {
+  firstName: string;
+  lastName: string;
+};
 
+/**
+ *
+ * Helper component that prints state of the form
+ *
+ */
+export const IsolateReRender = ({ control }: { control: Control }) => {
   const form = useWatch({ control });
 
-  console.log('form', form);
   return (
     <div>
       <code>
@@ -18,10 +24,9 @@ const IsolateReRender = ({ control }) => {
 };
 
 const HookFormBasic = () => {
-  const onSubmit = (values) => {
+  const onSubmit = (values: FormValues) => {
     alert(JSON.stringify(values, null, 2));
   };
-
   const { register, handleSubmit, control } = useForm();
 
   return (

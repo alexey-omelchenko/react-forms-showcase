@@ -1,15 +1,18 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
-const FormikBasicExample = () => {
+type FormValues = {
+  firstName: string;
+  lastName: string;
+};
+
+const FormikBasic = () => {
   const initialValues = {
     firstName: '',
     lastName: '',
   };
 
-
-  const onSubmit = (values) => {
+  const onSubmit = (values: FormValues) => {
     alert(JSON.stringify(values, null, 2));
   };
 
@@ -38,11 +41,10 @@ const FormikBasicExample = () => {
               </code>
             </div>
           </>
-
         )}
       />
     </div>
   );
 };
 
-export default FormikBasicExample;
+export default FormikBasic;

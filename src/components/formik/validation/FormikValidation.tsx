@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Formik, Form, Field, FormikErrors, ErrorMessage } from 'formik';
 
@@ -6,7 +5,7 @@ type FormValues = {
   firstName: string;
   lastName: string;
 };
-const FormikValidationExample = () => {
+const FormikValidation = () => {
   const initialValues: FormValues = {
     firstName: '',
     lastName: '',
@@ -57,4 +56,4 @@ const FormikValidationExample = () => {
   );
 };
 
-export default FormikValidationExample;
+export default FormikValidation;

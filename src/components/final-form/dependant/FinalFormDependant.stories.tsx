@@ -4,17 +4,17 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-import { NativeForm } from './NativeForm';
+import FinalFormBasic from './FinalFormDependant';
 
 export default {
-  title: 'React Forms/1.Basic',
+  title: 'React Forms/3.Dependent Field',
   parameters: {
     jsx: { skip: 1 },
   },
   decorators: [jsxDecorator],
-  component: NativeForm,
+  component: FinalFormBasic,
 } as Meta;
 
-const Template: Story<any> = (args) => <NativeForm {...args} />;
+const Template: Story<any> = (args) => <FinalFormBasic {...args} />;
 
-export const Vanilla = Template.bind({});
+export const FinalForm = Template.bind({});

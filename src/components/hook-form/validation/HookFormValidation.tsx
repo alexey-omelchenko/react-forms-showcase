@@ -1,28 +1,19 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { useForm, useWatch } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { IsolateReRender } from '../basic/HookFormBasic';
 
-const IsolateReRender = ({ control }) => {
-  const form = useWatch({ control });
-
-  console.log('form', form);
-  return (
-    <div>
-      <code>
-        <pre>{JSON.stringify(form, null, 2)}</pre>
-      </code>
-    </div>
-  );
+type FormValues = {
+  firstName: string;
+  lastName: string;
 };
 
 const HookFormValidation = () => {
-  const onSubmit = (values) => {
+  const onSubmit = (values: FormValues) => {
     alert(JSON.stringify(values, null, 2));
   };
 
   const { register, handleSubmit, errors, control } = useForm({ mode: 'onBlur' });
-
-  console.log('errors', errors);
 
   return (
     <div>
@@ -39,14 +30,24 @@ const HookFormValidation = () => {
 
         <button type="submit">Submit</button>
       </form>
-      <IsolateReRender control={control} />
 
-      {!!errors && errors.length && <div className="form-state">
-        <code>
-          <pre>{JSON.stringify(errors, null, 2)}</pre>
-        </code>
+      <div>
+        <b>Values: </b>
+        <IsolateReRender control={control} />
       </div>
-      }
+
+      <div>
+        <b>Errors</b>
+        {!!errors && (
+          <div className="form-state">
+            {Object.entries(errors).map((e) => (
+              <div>
+                name: {e[0]}, type: {e[1].type}, message: {e[1].message}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

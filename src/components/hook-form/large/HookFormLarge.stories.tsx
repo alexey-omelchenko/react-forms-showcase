@@ -3,14 +3,14 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-import HookFormBasic from './HookFormBasic';
+import HookFormLarge from './HookFormLarge';
 
 export default {
-  title: 'React Forms/1.Basic',
+  title: 'React Forms/4.Large Form',
   decorators: [jsxDecorator],
-  component: HookFormBasic,
+  component: HookFormLarge,
 } as Meta;
 
-const Template: Story<any> = (args) => <HookFormBasic {...args} />;
+const Template: Story<any> = (args) => <HookFormLarge {...args} />;
 
 export const ReactHookForm = Template.bind({});

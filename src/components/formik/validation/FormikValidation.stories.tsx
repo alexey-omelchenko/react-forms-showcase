@@ -3,14 +3,14 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-import HookFormBasic from './HookFormBasic';
+import FormikValidation from './FormikValidation';
 
 export default {
-  title: 'React Forms/1.Basic',
+  title: 'React Forms/2.Validation',
   decorators: [jsxDecorator],
-  component: HookFormBasic,
+  component: FormikValidation,
 } as Meta;
 
-const Template: Story<any> = (args) => <HookFormBasic {...args} />;
+const Template: Story<any> = (args) => <FormikValidation {...args} />;
 
-export const ReactHookForm = Template.bind({});
+export const Formik = Template.bind({});

@@ -1,20 +1,16 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-import FinalFormValidation from './FinalFormValidation';
+import FinalFormLarge from './FinalFormLarge';
 
 export default {
-  title: 'React Forms/2.Validation',
-  parameters: {
-    jsx: { skip: 1 },
-  },
+  title: 'React Forms/4.Large Form',
   decorators: [jsxDecorator],
-  component: FinalFormValidation,
+  component: FinalFormLarge,
 } as Meta;
 
-const Template: Story<any> = (args) => <FinalFormValidation {...args} />;
+const Template: Story<any> = (args) => <FinalFormLarge {...args} />;
 
 export const FinalForm = Template.bind({});

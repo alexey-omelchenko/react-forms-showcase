@@ -3,25 +3,34 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 
-const FinalFormValidationExample = () => {
+type FormValues = {
+  firstName: string;
+  lastName: string;
+};
+
+type ErrorsProps<Values> = {
+  [key in keyof Values]?: string;
+};
+
+const FinalFormValidation = () => {
   const initialValues = {
     firstName: '',
     lastName: '',
   };
 
-  const onSubmit = (values) => {
+  const onSubmit = (values: FormValues) => {
     alert(JSON.stringify(values, null, 2));
   };
 
-  const validate = values => {
-    const errors = {}
+  const validate = (values: FormValues) => {
+    const errors: ErrorsProps<FormValues> = {};
 
     if (!values.firstName) {
       errors.firstName = 'Required';
     }
 
     return errors;
-  }
+  };
 
   return (
     <div>
@@ -61,11 +70,10 @@ const FinalFormValidationExample = () => {
               </code>
             </div>
           </>
-
         )}
       />
-          </div>
-        );
+    </div>
+  );
 };
 
-export default FinalFormValidationExample;
+export default FinalFormValidation;

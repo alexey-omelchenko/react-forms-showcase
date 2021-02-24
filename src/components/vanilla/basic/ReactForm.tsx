@@ -1,21 +1,19 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import { watch } from 'fs';
 import React, { useState } from 'react';
 
-export const NativeForm = () => {
+const ReactForm = () => {
   const initialValues = {
     firstName: '',
     lastName: '',
   };
 
   const [formState, setFormState] = useState(initialValues);
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     alert(JSON.stringify(formState, null, 2));
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
@@ -45,4 +43,4 @@ export const NativeForm = () => {
   );
 };
 
-export default NativeForm;
+export default ReactForm;
