@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "target": "es5",
     "outDir": "./dist/",
-    "strict": true,
+    "strict": false,
     "sourceMap": true,
     "lib": [
       "dom",

@@ -2,4 +2,5 @@
 // styles for particular components should be included directly from the component.
 
 @import 'base-styles/variables'; // variables - include these wherever they are needed
+@import '../node_modules/bootstrap/scss/bootstrap';
 @import 'base-styles/base'; // body, typography, basic elements
