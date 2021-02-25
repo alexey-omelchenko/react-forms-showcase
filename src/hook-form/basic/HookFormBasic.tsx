@@ -27,7 +27,7 @@ const HookFormBasic = () => {
   const onSubmit = (values: FormValues) => {
     alert(JSON.stringify(values, null, 2));
   };
-  const { register, handleSubmit, control } = useForm();
+  const { register, handleSubmit, control, formState } = useForm();
 
   return (
     <div>
@@ -44,6 +44,12 @@ const HookFormBasic = () => {
         <button type="submit">Submit</button>
       </form>
       <IsolateReRender control={control} />
+      <div>
+        <div>Form state</div>
+        <code>
+          <pre>{JSON.stringify(formState, null, 2)}</pre>
+        </code>
+      </div>
     </div>
   );
 };

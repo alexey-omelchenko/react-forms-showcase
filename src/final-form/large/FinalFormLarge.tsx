@@ -31,7 +31,7 @@ const generateFields = (num: number) => {
   for (let i = 0; i < num; i += 1) {
     fields.push({
       name: `field${i}`,
-      element: <TextFieldWithCount name={`field${i}`} />,
+      element: <TextFieldWithCount key={i} name={`field${i}`} />,
     });
   }
 
@@ -60,7 +60,7 @@ const FinalFormLarge = () => {
         render={({ values, handleSubmit }) => (
           <>
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'flex' }}>{fields.map((field) => field.element)}</div>
+              <div>{fields.map((field) => field.element)}</div>
 
               <button type="submit">Submit</button>
             </form>

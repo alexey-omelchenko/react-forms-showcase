@@ -3,14 +3,14 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-import ReactForm from './ReactForm';
+import UncontrolledForm from './ReactFormUncontrolled';
 
 export default {
   title: 'React Forms/1.Basic',
   decorators: [jsxDecorator],
-  component: ReactForm,
+  component: UncontrolledForm,
 } as Meta;
 
-const Template: Story<any> = (args) => <ReactForm {...args} />;
+const Template: Story<any> = (args) => <UncontrolledForm {...args} />;
 
-export const Vanilla = Template.bind({});
+export const ReactFormUncontrolled = Template.bind({});

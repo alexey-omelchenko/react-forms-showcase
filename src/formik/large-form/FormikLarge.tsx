@@ -13,7 +13,7 @@ const generateFields = (num: number) => {
   for (let i = 0; i < num; i += 1) {
     fields.push({
       name: `field${i}`,
-      element: <Field type="text" name={`field${i}`} />,
+      element: <Field key={i} type="text" name={`field${i}`} />,
       // element: <FastField type="text" name={`field${i}`} />,
     });
   }
@@ -40,7 +40,7 @@ const FormikLarge = () => {
           <>
             <Form>
               {fields.map((field) => (
-                <div style={{ position: 'relative' }}>
+                <div key={field.name} style={{ position: 'relative' }}>
                   {field.element}
                   <RenderCount />
                 </div>

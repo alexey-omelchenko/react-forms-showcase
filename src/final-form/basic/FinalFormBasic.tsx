@@ -21,9 +21,9 @@ const FormikBasic = () => {
       <Form
         initialValues={initialValues}
         onSubmit={onSubmit}
-        render={({ values, handleSubmit }) => (
+        render={(renderProps) => (
           <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={renderProps.handleSubmit}>
               <div>
                 <label htmlFor="firstName">First Name: </label>
                 <Field type="text" id="firstName" name="firstName" component="input" />
@@ -37,7 +37,7 @@ const FormikBasic = () => {
             </form>
             <div className="form-state">
               <code>
-                <pre>{JSON.stringify(values, null, 2)}</pre>
+                <pre>{JSON.stringify(renderProps, null, 2)}</pre>
               </code>
             </div>
           </>

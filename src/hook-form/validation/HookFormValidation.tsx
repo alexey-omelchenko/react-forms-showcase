@@ -41,7 +41,7 @@ const HookFormValidation = () => {
         {!!errors && (
           <div className="form-state">
             {Object.entries(errors).map((e) => (
-              <div>
+              <div key={e[0]}>
                 name: {e[0]}, type: {e[1].type}, message: {e[1].message}
               </div>
             ))}
