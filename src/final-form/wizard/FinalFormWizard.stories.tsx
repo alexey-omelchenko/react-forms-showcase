@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FinalFormBasic from './FinalFormWizard';
 
 export default {
-  title: 'React Forms/6.Wizard',
+  title: 'React Forms/5.Wizard',
   decorators: [jsxDecorator],
   component: FinalFormBasic,
 } as Meta;

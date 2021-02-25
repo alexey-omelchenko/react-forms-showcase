@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import HookFormBasic from './HookFormWizard';
 
 export default {
-  title: 'React Forms/6.Wizard',
+  title: 'React Forms/5.Wizard',
   decorators: [jsxDecorator],
   component: HookFormBasic,
 } as Meta;

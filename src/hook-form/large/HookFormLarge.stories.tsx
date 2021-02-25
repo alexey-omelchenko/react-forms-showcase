@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import HookFormLarge from './HookFormLarge';
 
 export default {
-  title: 'React Forms/4.Large Form',
+  title: 'React Forms/3.Large Form',
   decorators: [jsxDecorator],
   component: HookFormLarge,
 } as Meta;

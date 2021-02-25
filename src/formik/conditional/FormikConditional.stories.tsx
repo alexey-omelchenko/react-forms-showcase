@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FormikBasic from './FormikConditional';
 
 export default {
-  title: 'React Forms/5.Conditional',
+  title: 'React Forms/4.Conditional',
   decorators: [jsxDecorator],
   component: FormikBasic,
 } as Meta;

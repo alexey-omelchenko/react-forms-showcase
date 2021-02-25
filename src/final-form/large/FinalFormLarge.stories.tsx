@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FinalFormLarge from './FinalFormLarge';
 
 export default {
-  title: 'React Forms/4.Large Form',
+  title: 'React Forms/3.Large Form',
   decorators: [jsxDecorator],
   component: FinalFormLarge,
 } as Meta;

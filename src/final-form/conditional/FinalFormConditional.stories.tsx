@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import FinalFormBasic from './FinalFormConditional';
 
 export default {
-  title: 'React Forms/5.Conditional',
+  title: 'React Forms/4.Conditional',
   decorators: [jsxDecorator],
   component: FinalFormBasic,
 } as Meta;

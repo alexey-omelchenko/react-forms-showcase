@@ -6,7 +6,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import HookFormBasic from './HookFormConditional';
 
 export default {
-  title: 'React Forms/5.Conditional',
+  title: 'React Forms/4.Conditional',
   decorators: [jsxDecorator],
   component: HookFormBasic,
 } as Meta;
